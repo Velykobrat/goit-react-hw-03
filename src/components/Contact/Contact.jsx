@@ -4,9 +4,10 @@ import styles from './Contact.module.css';
 
 function Contact({ id, name, number, onDeleteContact }) {
   return (
-    <li className={styles.contact}>
-      <p>{name}: {number}</p>
-      <button onClick={() => onDeleteContact(id)}>Delete</button>
+    <li className={styles.listItem}>
+      <span className={styles.name}>{name}</span>
+      <span className={styles.number}>{number}</span>
+      <button onClick={() => onDeleteContact(id)} className={styles.button}>Delete</button>
     </li>
   );
 }
